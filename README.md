@@ -1,30 +1,33 @@
-# code-impact
+# Code Impact
 
-Lightweight change-impact helper for VS Code.
-When a function is selected, the extension shows a short list of other scripts and line numbers that would be affected by a change.
+Lightweight change-impact helper for VS Code.  
+Select a function or word and see other files and lines that reference it.
 
-## Current Prototype Status
-This is an early prototype for CMPA 4302 Project 01.
-The Impact panel currently displays hard-coded example data. Real parsing of the open file will be added in later iterations.
+## Features
+- Side panel that updates as you move the cursor
+- Hover bubble with clickable results
+- Right-click “Show Impact” command
+- Ignores comments and string literals
+- Shows multiple matches per file
+- Configurable max results
+- Click any result to jump directly to that line
 
-## How to Test
-1. Make sure you have Git installed (or just download the ZIP from the green Code button on GitHub).
-2. Clone or download the repository:
-   git clone https://github.com/landotakman1/code-impact.git
-3. Open the code-impact folder in VS Code (You can use File -> Open Folder or __if you are a real animal__, run it from the terminal with: code .).
-4. Press F5 to launch the Extension Development Host.
-5. In the new window, click the Impact icon in the Activity Bar (left side).
-6. The panel will show a sample list of affected scripts. Clicking an item displays a navigation message.
+## Installation
+1. Download the latest `.vsix` from the [Releases](https://github.com/landotakman1/code-impact/releases) or from the repo root.
+2. In VS Code, open the Extensions view (`Ctrl+Shift+X`).
+3. Click the `...` menu → **Install from VSIX…**
+4. Select the `code-impact-0.0.1.vsix` file.
+5. Reload VS Code when prompted.
 
-## Features (Prototype)
-- Sidebar view accessible from the Activity Bar
-- Displays selected function and affected scripts/line numbers
-- Basic click handling
+## Usage
+- Place your cursor on a function or word → the Impact panel updates automatically.
+- Hover over a function to see a floating list.
+- Right-click a word → **Show Impact**.
+- Click any result to open the file and jump to the line.
 
-## Requirements
-- VS Code 1.80 or later
-- Node.js (only needed if you want to modify the extension)
+## Settings
+Search for “Code Impact” in VS Code settings to adjust the maximum number of results.
 
-## Known Issues
-- Data is currently hard-coded
-- Clicking a file shows a message instead of opening the actual file
+## Current Status
+Early prototype (v0.0.1). Built for CMPA 4302. Focused on C# / Unity projects.
+More features and language support coming soon.
